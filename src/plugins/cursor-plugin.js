@@ -104,6 +104,7 @@ export const createDecorations = (
         decorations.push(
           Decoration.widget(head, () => createCursor(user), {
             key: clientId + '',
+            user: user,
             side: 10
           })
         )
@@ -112,7 +113,8 @@ export const createDecorations = (
         decorations.push(
           Decoration.inline(from, to, createSelection(user), {
             inclusiveEnd: true,
-            inclusiveStart: false
+            inclusiveStart: false,
+            user: user
           })
         )
       }
